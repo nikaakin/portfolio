@@ -1,8 +1,12 @@
+"use client";
 import { LIGHT_THEME } from "@/config";
 import { useHeader } from "./useHeader";
 import Image from "next/image";
+import dynamic, { Loader, LoaderComponent } from "next/dynamic";
+import { ComponentType, PropsWithChildren } from "react";
 
 export const Header = () => {
+  // make this as floating header
   const { theme, toggleTheme } = useHeader();
   return (
     <div>
@@ -17,3 +21,10 @@ export const Header = () => {
     </div>
   );
 };
+
+export const DynamicHeader = dynamic(
+  () => import("./Header").then((mod) => mod.Header as ComponentType),
+  {
+    ssr: false,
+  }
+) as ComponentType;

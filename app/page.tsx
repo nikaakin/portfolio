@@ -1,10 +1,10 @@
-import { Header } from "@/components";
 import { Introduction } from "@/components";
+import { DynamicHeader } from "@/components";
 
 export default function Home() {
   return (
     <main>
-      <Header />
+      <DynamicHeader />
       <Introduction />
     </main>
   );
