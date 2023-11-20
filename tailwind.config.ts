@@ -19,6 +19,11 @@ const config: Config = {
       width: {
         "300": "1200px",
       },
+      boxShadow: {
+        "theme-button":
+          "0 0 10px -2px var(--tw-shadow-color), inset 0 0 0px 0 var(--tw-shadow-color)",
+        header: "0 0 10px -2px var(--tw-shadow-color)",
+      },
     },
   },
   plugins: [],

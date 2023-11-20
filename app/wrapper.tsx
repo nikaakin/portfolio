@@ -16,7 +16,7 @@ export const Wrapper = ({ children }: { children: React.ReactNode }) => {
       }`}
     >
       <div
-        className={`w-300 mx-auto  min-h-screen px-20 py-24 transition-all duration-500 ${
+        className={`text-sm md:text-base w-full md:w-9/12 mx-auto  min-h-screen px-12 md:px-20 pt-20 md:pt-28 pb-10 md:pb-20 md:py-24 transition-all ${
           theme === LIGHT_THEME ? "bg-zinc-50" : "bg-main-forefront"
         }`}
       >

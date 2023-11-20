@@ -6,19 +6,34 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { LightThemeIcon, DarkThemeIcon } from "@/Icons";
 
+const routes = ["/", "/about", "/contact", "/projects"];
+
 export const Header = () => {
-  const { theme, toggleTheme } = useHeader();
-  console.log("theme", theme);
+  const { theme, toggleTheme, pathname } = useHeader();
+  console.log(pathname === "/");
+
   return (
-    <div className="flex justify-between">
-      <div className="flex gap-6">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/projects">projects</Link>
+    <div
+      className={`fixed flex justify-center items-center top-5 left-1/2 -translate-x-1/2  w-fit gap-6 md:gap-12 shadow-header rounded-3xl py-1 md:py-2 px-4 md:px-10
+    ${theme === LIGHT_THEME ? "shadow-slate-300" : "shadow-black"}
+    `}
+    >
+      <div className="flex gap-3 md:gap-6">
+        {routes.map((route) => (
+          <Link
+            href={route}
+            key={route}
+            className={`capitalize ${pathname === route && "text-cyan-700"}`}
+          >
+            {route === "/" ? "home" : route.slice(1)}
+          </Link>
+        ))}
       </div>
-      <div>
-        <button onClick={toggleTheme} className="outline-none">
+      <div className="flex items-center">
+        <button
+          onClick={toggleTheme}
+          className="outline-none rounded-full active:rotate-90 rotate-0 transition-all duration-300"
+        >
           {theme === LIGHT_THEME ? <LightThemeIcon /> : <DarkThemeIcon />}
         </button>
       </div>

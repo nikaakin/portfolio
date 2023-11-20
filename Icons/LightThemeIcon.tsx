@@ -2,8 +2,8 @@ export const LightThemeIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28px"
-      height="28px"
+      width="24px"
+      height="24px"
       viewBox="0 0 36 36"
     >
       <g id="Lager_93" data-name="Lager 93" transform="translate(2 2)">
