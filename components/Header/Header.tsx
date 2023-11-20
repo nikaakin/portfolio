@@ -10,7 +10,6 @@ const routes = ["/", "/about", "/contact", "/projects"];
 
 export const Header = () => {
   const { theme, toggleTheme, pathname } = useHeader();
-  console.log(pathname === "/");
 
   return (
     <div
@@ -42,7 +41,7 @@ export const Header = () => {
 };
 
 export const DynamicHeader = dynamic(
-  () => import("./Header").then((mod) => mod.Header as ComponentType),
+  () => import("./Header").then((mod) => mod.Header),
   {
     ssr: false,
   }

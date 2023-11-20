@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context";
 import { DynamicWrapper } from "./wrapper";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Explore my projects and contact me.",
+  keywords:
+    "portfolio, React, Next.js, TypeScript, Tailwind CSS, Laravel, Flutter, Dart, web development, mobile app, full-stack, front-end, back-end, software, ,projects, contact, about",
 };
 
 export default function RootLayout({
@@ -18,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ThemeProvider>
           <DynamicWrapper>{children}</DynamicWrapper>
         </ThemeProvider>

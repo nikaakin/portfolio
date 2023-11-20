@@ -2,14 +2,16 @@
 import { LIGHT_THEME } from "@/config";
 import { ThemeContext } from "@/context";
 import dynamic from "next/dynamic";
-import { ComponentType, PropsWithChildren, useContext } from "react";
+import { useContext } from "react";
 
 export const Wrapper = ({ children }: { children: React.ReactNode }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
     <div
-      className={`${
+      className={`
+      font-heebo
+      ${
         theme === LIGHT_THEME
           ? "bg-zinc-100 text-black"
           : "bg-main-background text-white"
@@ -27,10 +29,7 @@ export const Wrapper = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const DynamicWrapper = dynamic(
-  () =>
-    import("./wrapper").then(
-      (mod) => mod.Wrapper as ComponentType<PropsWithChildren>
-    ),
+  () => import("./wrapper").then((mod) => mod.Wrapper),
   {
     ssr: false,
   }
