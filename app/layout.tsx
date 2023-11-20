@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context";
+import { DynamicWrapper } from "./wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  bg-zinc-50`}>
+      <body className={inter.className}>
         <ThemeProvider>
-          <div className="w-300 mx-auto bg-white min-h-screen px-20 py-24">
-            {children}
-          </div>
+          <DynamicWrapper>{children}</DynamicWrapper>
         </ThemeProvider>
       </body>
     </html>

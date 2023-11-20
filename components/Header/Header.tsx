@@ -1,23 +1,27 @@
 "use client";
 import { LIGHT_THEME } from "@/config";
 import { useHeader } from "./useHeader";
-import Image from "next/image";
-import dynamic, { Loader, LoaderComponent } from "next/dynamic";
-import { ComponentType, PropsWithChildren } from "react";
+import { ComponentType } from "react";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+import { LightThemeIcon, DarkThemeIcon } from "@/Icons";
 
 export const Header = () => {
-  // make this as floating header
   const { theme, toggleTheme } = useHeader();
+  console.log("theme", theme);
   return (
-    <div>
-      <button onClick={toggleTheme}>
-        <Image
-          src={theme === LIGHT_THEME ? "/light_theme.png" : "/dark_theme.png"}
-          alt="theme icon"
-          width={32}
-          height={32}
-        />
-      </button>
+    <div className="flex justify-between">
+      <div className="flex gap-6">
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/projects">projects</Link>
+      </div>
+      <div>
+        <button onClick={toggleTheme} className="outline-none">
+          {theme === LIGHT_THEME ? <LightThemeIcon /> : <DarkThemeIcon />}
+        </button>
+      </div>
     </div>
   );
 };
@@ -27,4 +31,4 @@ export const DynamicHeader = dynamic(
   {
     ssr: false,
   }
-) as ComponentType;
+);

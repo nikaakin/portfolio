@@ -1,5 +1,4 @@
-import { Introduction } from "@/components";
-import { DynamicHeader } from "@/components";
+import { DynamicHeader, Introduction } from "@/components";
 
 export default function Home() {
   return (

@@ -3,7 +3,7 @@ import { DARK_THEME, LIGHT_THEME, THEME_KEY } from "@/config";
 import { FC, PropsWithChildren, createContext, useState } from "react";
 
 export const ThemeContext = createContext({
-  theme: LIGHT_THEME,
+  theme: DARK_THEME,
   toggleTheme: () => {},
 });
 
@@ -11,12 +11,13 @@ export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState(
     typeof window !== "undefined"
       ? (localStorage.getItem(THEME_KEY) as string)
-      : LIGHT_THEME
+      : DARK_THEME
   );
 
   const toggleTheme = () => {
-    setTheme(theme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME);
-    localStorage.setItem(THEME_KEY, theme);
+    const newTheme = theme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
+    setTheme(newTheme);
+    localStorage.setItem(THEME_KEY, newTheme);
   };
 
   return (
