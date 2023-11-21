@@ -8,7 +8,7 @@ import { useContext } from "react";
 export const Introduction = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div>
+    <div className="mb-3 md:mb-5">
       <div className="mb-6 md:mb-8">
         <Image alt="avatar" src="/avatar.png" width={64} height={64} />
       </div>
