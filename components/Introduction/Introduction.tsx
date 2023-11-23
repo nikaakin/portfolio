@@ -49,9 +49,6 @@ export const Introduction = () => {
           )}
         </div>
       </div>
-      <div>
-        <a href="">black link</a>
-      </div>
     </div>
   );
 };

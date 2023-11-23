@@ -1,7 +1,6 @@
 "use client";
 import { LIGHT_THEME } from "@/config";
 import { useHeader } from "./useHeader";
-import { ComponentType } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { LightThemeIcon, DarkThemeIcon } from "@/Icons";

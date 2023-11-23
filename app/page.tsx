@@ -1,4 +1,9 @@
-import { DynamicHeader, Introduction, PersonalLinks } from "@/components";
+import {
+  DynamicHeader,
+  Introduction,
+  PersonalLinks,
+  ProjectsOnHome,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -6,6 +11,7 @@ export default function Home() {
       <DynamicHeader />
       <Introduction />
       <PersonalLinks />
+      <ProjectsOnHome theme="black" />
     </main>
   );
 }
