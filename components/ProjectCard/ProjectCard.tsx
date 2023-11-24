@@ -1,12 +1,11 @@
 import { GithubIcon, LinkIcon } from "@/Icons";
 import { ProjectType } from "@/types";
-import Image from "next/image";
 
 type ProjectCardProps = { project: ProjectType; theme: string };
 
 export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
   return (
-    <div className="flex">
+    <div className="flex flex-col w-80 overflow-hidden">
       <div className="flex flex-row gap-2 md:gap-3">
         {project.tags.map((tag) => tag.imgUrl)}
       </div>

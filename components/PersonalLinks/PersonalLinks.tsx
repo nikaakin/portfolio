@@ -1,11 +1,6 @@
-"use client";
 import { GithubIcon, LeetcodeIcon, LinkedinIcon } from "@/Icons";
-import { ThemeContext } from "@/context";
-import { useContext } from "react";
 
-export const PersonalLinks = () => {
-  const { theme } = useContext(ThemeContext);
-
+export const PersonalLinks = ({ theme }: { theme: string }) => {
   return (
     <div className="flex gap-3 md:gap-4 items-center">
       <a

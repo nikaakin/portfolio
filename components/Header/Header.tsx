@@ -1,11 +1,9 @@
 "use client";
-import { LIGHT_THEME } from "@/config";
+import { LIGHT_THEME, routes } from "@/config";
 import { useHeader } from "./useHeader";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { LightThemeIcon, DarkThemeIcon } from "@/Icons";
-
-const routes = ["/", "/about", "/contact", "/projects"];
 
 export const Header = () => {
   const { theme, toggleTheme, pathname } = useHeader();

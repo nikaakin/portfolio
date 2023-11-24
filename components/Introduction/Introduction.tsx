@@ -1,12 +1,8 @@
-"use client";
 import { LIGHT_THEME } from "@/config";
-import { ThemeContext } from "@/context";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useContext } from "react";
 
-export const Introduction = () => {
-  const { theme } = useContext(ThemeContext);
+export const Introduction = ({ theme }: { theme: string }) => {
   return (
     <div className="mb-3 md:mb-5">
       <div className="mb-6 md:mb-8">

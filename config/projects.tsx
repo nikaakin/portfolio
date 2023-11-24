@@ -2,7 +2,7 @@ import { ReactIcon, TypescriptIcon } from "@/Icons";
 import { SCSSIcon } from "@/Icons/SCSSIcon";
 import { ProjectType } from "@/types";
 
-export const projects: ProjectType[] = [
+export const projects: (theme: string) => ProjectType[] = (theme) => [
   {
     id: "1",
     name: "CSS Challenges",
@@ -10,11 +10,11 @@ export const projects: ProjectType[] = [
     createdAt: "2021-05-01",
     tags: [
       {
-        imgUrl: <ReactIcon />,
+        imgUrl: <ReactIcon theme={theme} />,
         name: "React",
       },
       {
-        imgUrl: <TypescriptIcon />,
+        imgUrl: <TypescriptIcon theme={theme} />,
         name: "Typescript",
       },
       {
