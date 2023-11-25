@@ -4,8 +4,8 @@ export const TypescriptIcon = ({ theme }: { theme: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48px"
-      height="48px"
+      width="36px"
+      height="36px"
       viewBox="0 0 32 32"
     >
       <title>file_type_typescript</title>

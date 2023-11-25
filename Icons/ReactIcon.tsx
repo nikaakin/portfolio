@@ -4,8 +4,8 @@ export const ReactIcon = ({ theme }: { theme: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="48px"
-      width="48px"
+      height="36px"
+      width="36px"
       viewBox="0 0 512 512"
     >
       <path

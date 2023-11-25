@@ -25,7 +25,7 @@ export const Introduction = ({ theme }: { theme: string }) => {
             challenges and opportunities to grow as a developer.
           </p>
         </div>
-        <div className="">
+        <div>
           {theme === LIGHT_THEME ? (
             <Image
               src="/keyboard_light.jpg"

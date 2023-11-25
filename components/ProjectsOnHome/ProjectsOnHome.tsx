@@ -3,7 +3,7 @@ import { ProjectCard } from "@/components";
 
 export const ProjectsOnHome = ({ theme }: { theme: string }) => {
   return (
-    <div className="flex flex-wrap mt-10">
+    <div className="flex flex-wrap ">
       {projects(theme).map((project) => (
         <ProjectCard
           project={project}

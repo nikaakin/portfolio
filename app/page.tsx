@@ -14,8 +14,10 @@ export default function Home() {
   return (
     <main>
       <DynamicHeader />
-      <Introduction theme={theme} />
-      <PersonalLinks theme={theme} />
+      <div className="md:mb-24 mb-3">
+        <Introduction theme={theme} />
+        <PersonalLinks theme={theme} />
+      </div>
       <ProjectsOnHome theme={theme} />
     </main>
   );
