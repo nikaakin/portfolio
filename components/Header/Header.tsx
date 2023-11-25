@@ -10,8 +10,12 @@ export const Header = () => {
 
   return (
     <div
-      className={`fixed flex justify-center items-center top-5 left-1/2 -translate-x-1/2  w-fit gap-6 md:gap-12 shadow-header rounded-3xl py-1 md:py-2 px-4 md:px-10
-    ${theme === LIGHT_THEME ? "shadow-slate-300" : "shadow-black"}
+      className={`z-50 fixed flex justify-center items-center top-5 left-1/2 -translate-x-1/2  w-fit gap-6 md:gap-12 shadow-header rounded-3xl py-1 md:py-2 px-4 md:px-10
+    ${
+      theme === LIGHT_THEME
+        ? "shadow-slate-300 bg-zinc-50"
+        : "shadow-black bg-main-forefront"
+    }
     `}
     >
       <div className="flex gap-3 md:gap-6">

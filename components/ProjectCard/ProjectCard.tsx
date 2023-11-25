@@ -34,7 +34,7 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
           <LinkIcon theme={theme} />
           <span
             className={`text-sm  ${
-              theme === LIGHT_THEME ? "text-cyan-700" : "text-cyan-400"
+              theme === LIGHT_THEME ? "text-sky-700" : "text-cyan-600"
             }`}
           >
             View Project
@@ -47,14 +47,14 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
         >
           <GithubIcon
             theme={theme}
-            light="#009d8f"
-            dark="#2fad8f"
+            light="#0aad8f"
+            dark="#009d8f"
             width="24"
             height="24"
           />
           <span
             className={`text-sm  ${
-              theme === LIGHT_THEME ? "text-teal-800" : "text-teal-600"
+              theme === LIGHT_THEME ? "text-teal-700" : "text-teal-500"
             }`}
           >
             View Source
