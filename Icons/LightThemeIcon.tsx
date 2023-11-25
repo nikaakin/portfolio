@@ -6,15 +6,14 @@ export const LightThemeIcon = () => {
       height="24px"
       viewBox="0 0 36 36"
     >
-      <g id="Lager_93" data-name="Lager 93" transform="translate(2 2)">
-        <g id="Sun_3_Brightness_3" data-name="Sun 3, Brightness 3">
+      <g id="Lager_93" transform="translate(2 2)">
+        <g id="Sun_3_Brightness_3">
           <path
             id="Path_68"
-            data-name="Path 68"
             d="M32,14H27.033c-2,1.769-.779,4,.967,4h4.967C34.966,16.231,33.746,14,32,14Z"
             fill="#040505"
           />
-          <g id="Path_69" data-name="Path 69" fill="none" strokeMiterlimit="10">
+          <g id="Path_69" fill="none" strokeMiterlimit="10">
             <path
               d="M17.172,10.111a6,6,0,1,0,4.715,4.715A6.01,6.01,0,0,0,17.172,10.111Z"
               stroke="none"
@@ -27,7 +26,6 @@ export const LightThemeIcon = () => {
           </g>
           <rect
             id="Rectangle_26"
-            data-name="Rectangle 26"
             width="8"
             height="4"
             rx="1.993"
@@ -36,7 +34,6 @@ export const LightThemeIcon = () => {
           />
           <rect
             id="Rectangle_27"
-            data-name="Rectangle 27"
             width="8"
             height="4"
             rx="1.993"
@@ -45,7 +42,6 @@ export const LightThemeIcon = () => {
           />
           <rect
             id="Rectangle_28"
-            data-name="Rectangle 28"
             width="8"
             height="4"
             rx="1.993"
@@ -54,7 +50,6 @@ export const LightThemeIcon = () => {
           />
           <rect
             id="Rectangle_29"
-            data-name="Rectangle 29"
             width="8"
             height="4"
             rx="1.993"
@@ -64,7 +59,6 @@ export const LightThemeIcon = () => {
           <g id="Group_22" data-name="Group 22">
             <rect
               id="Rectangle_30"
-              data-name="Rectangle 30"
               width="6.925"
               height="3.766"
               rx="1.883"
@@ -75,7 +69,6 @@ export const LightThemeIcon = () => {
           <g id="Group_23" data-name="Group 23">
             <rect
               id="Rectangle_31"
-              data-name="Rectangle 31"
               width="3.766"
               height="6.925"
               rx="1.883"
@@ -86,7 +79,6 @@ export const LightThemeIcon = () => {
           <g id="Group_24" data-name="Group 24">
             <rect
               id="Rectangle_32"
-              data-name="Rectangle 32"
               width="3.766"
               height="6.925"
               rx="1.883"
@@ -97,7 +89,6 @@ export const LightThemeIcon = () => {
           <g id="Group_25" data-name="Group 25">
             <rect
               id="Rectangle_33"
-              data-name="Rectangle 33"
               width="6.925"
               height="3.766"
               rx="1.883"

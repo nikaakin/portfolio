@@ -10,15 +10,17 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     createdAt: "2021-05-01",
     tags: [
       {
-        imgUrl: <ReactIcon theme={theme} />,
+        imgUrl: <ReactIcon theme={theme} key="react-css-challenges" />,
         name: "React",
       },
       {
-        imgUrl: <TypescriptIcon theme={theme} />,
+        imgUrl: (
+          <TypescriptIcon theme={theme} key="typescript-css-challenges" />
+        ),
         name: "Typescript",
       },
       {
-        imgUrl: <SCSSIcon />,
+        imgUrl: <SCSSIcon key="scss-css-challenges" />,
         name: "SCSS",
       },
     ],
