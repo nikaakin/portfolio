@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <DynamicHeader />
-      <div className="md:mb-24 mb-3">
+      <div className="md:mb-16 mb-8">
         <Introduction theme={theme} />
         <PersonalLinks theme={theme} />
       </div>

@@ -3,7 +3,7 @@ import { ProjectCard } from "@/components";
 
 export const ProjectsOnHome = ({ theme }: { theme: string }) => {
   return (
-    <div className="flex flex-wrap ">
+    <div className="flex flex-wrap justify-center gap-10">
       {projects(theme).map((project) => (
         <ProjectCard
           project={project}
