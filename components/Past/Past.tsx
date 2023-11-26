@@ -5,7 +5,7 @@ import { EducationIcon, ExperienceIcon } from "@/Icons";
 
 export const Past = ({ theme }: ThemePropType) => {
   return (
-    <div className="flex flex-wrap md:flex-nowrap justify-center gap-10 items-start ">
+    <div className="flex flex-wrap md:flex-nowrap justify-center md:gap-15 gap-8 items-start ">
       <div
         className={`flex  md:gap-10 gap-6 flex-col  border-2 rounded-xl md:py-7 md:px-5 py-5 px-3 ${
           theme === LIGHT_THEME ? "border-zinc-200" : "border-slate-800"

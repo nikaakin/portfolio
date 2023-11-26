@@ -1,5 +1,4 @@
-import { ReactIcon, TypescriptIcon } from "@/Icons";
-import { SCSSIcon } from "@/Icons/SCSSIcon";
+import { ReactIcon, TypescriptIcon, SCSSIcon } from "@/Icons";
 import { ProjectType } from "@/types";
 
 export const projects: (theme: string) => ProjectType[] = (theme) => [

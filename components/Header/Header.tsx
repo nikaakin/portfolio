@@ -23,7 +23,9 @@ export const Header = () => {
           <Link
             href={route}
             key={route}
-            className={`capitalize ${pathname === route && "text-cyan-700"}`}
+            className={`capitalize hover:text-cyan-700 transition-colors ${
+              pathname === route && "text-cyan-700"
+            }`}
           >
             {route === "/" ? "home" : route.slice(1)}
           </Link>

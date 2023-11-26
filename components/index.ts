@@ -4,4 +4,6 @@ export * from "./PersonalLinks";
 export * from "./ProjectsOnHome";
 export * from "./ProjectCard";
 export * from "./ExperienceCard";
-export * from "..";
+export * from "./EducationCard";
+export * from "./Footer";
+export * from "./Past";

@@ -8,3 +8,4 @@ export * from "./ReactIcon";
 export * from "./TypescriptIcon";
 export * from "./EducationIcon";
 export * from "./ExperienceIcon";
+export * from "./SCSSIcon";

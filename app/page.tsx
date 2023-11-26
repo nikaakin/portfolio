@@ -4,8 +4,9 @@ import {
   Introduction,
   PersonalLinks,
   ProjectsOnHome,
+  Past,
+  Footer,
 } from "@/components";
-import { Past } from "@/components/Past";
 import { ThemeContext } from "@/context";
 import { useContext } from "react";
 
@@ -25,6 +26,7 @@ export default function Home() {
       <div className="md:mb-16 mb-8">
         <Past theme={theme} />
       </div>
+      <Footer theme={theme} />
     </main>
   );
 }
