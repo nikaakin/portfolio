@@ -1,10 +1,10 @@
 import { Header } from "@/components";
 
-export default function AboutPage() {
+export default function ContactPage() {
   return (
     <div>
       <Header />
-      <div>About</div>
+      <div>Contact</div>
     </div>
   );
 }

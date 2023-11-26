@@ -33,6 +33,7 @@ export const Introduction = ({ theme }: { theme: string }) => {
               width={640}
               height={640}
               className="w-full rounded-lg h-auto rotate-3"
+              priority
             />
           ) : (
             <Image
@@ -41,6 +42,7 @@ export const Introduction = ({ theme }: { theme: string }) => {
               width={640}
               height={640}
               className="w-full rounded-lg h-auto rotate-3"
+              priority
             />
           )}
         </div>

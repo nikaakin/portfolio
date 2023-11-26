@@ -1,10 +1,10 @@
 import { Header } from "@/components";
 
-export default function AboutPage() {
+export default function ProjectsPage() {
   return (
     <div>
       <Header />
-      <div>About</div>
+      <div>Projects</div>
     </div>
   );
 }
