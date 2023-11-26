@@ -5,6 +5,7 @@ import {
   PersonalLinks,
   ProjectsOnHome,
 } from "@/components";
+import { Past } from "@/components/Past";
 import { ThemeContext } from "@/context";
 import { useContext } from "react";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <PersonalLinks theme={theme} />
       </div>
       <ProjectsOnHome theme={theme} />
+      <Past theme={theme} />
     </main>
   );
 }

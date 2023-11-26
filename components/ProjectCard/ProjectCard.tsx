@@ -1,6 +1,7 @@
 import { GithubIcon, LinkIcon } from "@/Icons";
 import { LIGHT_THEME } from "@/config";
 import { ProjectType } from "@/types";
+import { Fragment } from "react";
 
 type ProjectCardProps = { project: ProjectType; theme: string };
 
@@ -26,39 +27,47 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
         {project.description}
       </p>
 
-      <div className="flex justify-between">
+      <div className="flex">
         <a
-          href={project.websiteUrl}
-          className="flex items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
+          href={project.githubUrl}
+          className="flex flex-1 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
         >
-          <LinkIcon theme={theme} />
-          <span
-            className={`text-sm  ${
-              theme === LIGHT_THEME ? "text-sky-700" : "text-cyan-600"
-            }`}
-          >
-            View Project
-          </span>
+          {project.githubUrl && (
+            <Fragment>
+              <GithubIcon
+                theme={theme}
+                light="#0aad8f"
+                dark="#009d8f"
+                width="24"
+                height="24"
+              />
+              <span
+                className={`text-sm  ${
+                  theme === LIGHT_THEME ? "text-teal-700" : "text-teal-500"
+                }`}
+              >
+                View Source
+              </span>
+            </Fragment>
+          )}
         </a>
 
         <a
           href={project.websiteUrl}
-          className="flex mx-2 md:mx-3 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
+          className="flex mr-2 md:mr-3 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity "
         >
-          <GithubIcon
-            theme={theme}
-            light="#0aad8f"
-            dark="#009d8f"
-            width="24"
-            height="24"
-          />
-          <span
-            className={`text-sm  ${
-              theme === LIGHT_THEME ? "text-teal-700" : "text-teal-500"
-            }`}
-          >
-            View Source
-          </span>
+          {project.websiteUrl && (
+            <Fragment>
+              <LinkIcon theme={theme} />
+              <span
+                className={`text-sm  ${
+                  theme === LIGHT_THEME ? "text-sky-700" : "text-cyan-600"
+                }`}
+              >
+                View Project
+              </span>
+            </Fragment>
+          )}
         </a>
       </div>
     </div>
