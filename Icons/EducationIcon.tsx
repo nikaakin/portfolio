@@ -1,8 +1,13 @@
 export const EducationIcon = ({ theme }: { theme: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-      <g id="icons_without_caption" data-name="icons without caption">
-        <g id="EDUCATION_SAVINGS" data-name="EDUCATION SAVINGS">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 256"
+      width="36px"
+      height="36px"
+    >
+      <g id="icons_without_caption">
+        <g id="EDUCATION_SAVINGS">
           <path
             fill={theme === "light" ? "#1a1a1a" : "#fafafa"}
             d="M180.69 119.44v28a21.89 21.89 0 0 1 4-1.35v-26.65zM128 98.5c-32.31 0-56.68 9-56.68 20.94h4c0-8 21.64-16.94 52.68-16.94s52.68 8.93 52.68 16.94h4c0-11.94-24.37-20.94-56.68-20.94zM128 143.9c-14.82 0-28.79 2-39.32 5.66-5.91 2-10.42 4.52-13.36 7.29v-37.41h-4v45.39c0 11.94 24.37 20.94 56.68 20.94 14.39 0 27.19-1.78 37-4.82 1.33-.41 2.6-.84 3.81-1.3a22.19 22.19 0 0 1-1.46-3.84c-1.19.45-2.45.88-3.79 1.29-9.09 2.8-21.33 4.67-35.54 4.67-31.05 0-52.68-8.93-52.68-16.94 0-8 21.64-16.93 52.68-16.93 16.19 0 29.83 2.43 39.16 5.9 1.36.5 2.62 1 3.79 1.56a22.31 22.31 0 0 1 2.78-3.2q-1.82-.91-3.9-1.74c-10.23-4.06-24.95-6.52-41.85-6.52z"

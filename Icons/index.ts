@@ -7,4 +7,4 @@ export * from "./LinkIcon";
 export * from "./ReactIcon";
 export * from "./TypescriptIcon";
 export * from "./EducationIcon";
-export * from "./WorkIcon";
+export * from "./ExperienceIcon";

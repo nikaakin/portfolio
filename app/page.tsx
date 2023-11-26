@@ -19,8 +19,12 @@ export default function Home() {
         <Introduction theme={theme} />
         <PersonalLinks theme={theme} />
       </div>
-      <ProjectsOnHome theme={theme} />
-      <Past theme={theme} />
+      <div className="md:mb-16 mb-8">
+        <ProjectsOnHome theme={theme} />
+      </div>
+      <div className="md:mb-16 mb-8">
+        <Past theme={theme} />
+      </div>
     </main>
   );
 }
