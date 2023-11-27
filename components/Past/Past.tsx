@@ -17,7 +17,7 @@ export const Past = ({ theme }: ThemePropType) => {
           }`}
         >
           <ExperienceIcon theme={theme} />
-          <span>Education</span>
+          <span>Experience</span>
         </div>
 
         {experience.map((exp) => (
