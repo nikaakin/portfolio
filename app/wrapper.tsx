@@ -18,13 +18,15 @@ export const Wrapper = ({ children }: { children: React.ReactNode }) => {
       }`}
     >
       <div
-        className={`text-sm md:text-base w-full  md:w-3/4 mx-auto  min-h-screen px-6 md:px-20 pt-20 md:pt-28 pb-10 md:pb-20 md:py-24 transition-all ${
+        className={`flex flex-col text-sm md:text-base w-full md:w-3/4 mx-auto min-h-screen px-6 md:px-20 pt-20 md:pt-28 pb-10 md:pb-20 md:py-24  ${
           theme === LIGHT_THEME ? "bg-zinc-50" : "bg-main-forefront"
         }`}
       >
         <DynamicHeader />
-        {children}
-        <Footer theme={theme} />
+        <div className="flex-1">{children}</div>
+        <div className="justify-self-end">
+          <Footer theme={theme} />
+        </div>
       </div>
     </div>
   );
