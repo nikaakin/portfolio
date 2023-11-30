@@ -1,4 +1,5 @@
 "use client";
+import { DynamicHeader, Footer } from "@/components";
 import { LIGHT_THEME } from "@/config";
 import { ThemeContext } from "@/context";
 import dynamic from "next/dynamic";
@@ -9,8 +10,7 @@ export const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className={`
-      font-heebo
+      className={` font-heebo
       ${
         theme === LIGHT_THEME
           ? "bg-zinc-100 text-black"
@@ -22,7 +22,9 @@ export const Wrapper = ({ children }: { children: React.ReactNode }) => {
           theme === LIGHT_THEME ? "bg-zinc-50" : "bg-main-forefront"
         }`}
       >
+        <DynamicHeader />
         {children}
+        <Footer theme={theme} />
       </div>
     </div>
   );
