@@ -15,7 +15,7 @@ export default function AboutPage() {
           I&apos;m Nika Cuckiridze, I live in Georgia
         </h1>
 
-        <p>
+        <p className="leading-loose">
           I&apos;ve worked on a variety of projects over the years and I&apos;m
           proud of the progress I&apos;ve made. Many of these projects are
           open-source and available for others to explore and contribute to. If
