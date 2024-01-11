@@ -29,6 +29,7 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
 
       <div className="flex">
         <a
+          target="_blank"
           href={project.githubUrl}
           className="flex flex-1 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
         >
@@ -53,8 +54,9 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
         </a>
 
         <a
+          target="_blank"
           href={project.websiteUrl}
-          className="flex mr-2 md:mr-3 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity "
+          className="flex mr-2 md:mr-3 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
         >
           {project.websiteUrl && (
             <Fragment>
