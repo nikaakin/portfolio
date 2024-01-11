@@ -1,16 +1,17 @@
 import { GithubIcon, LinkIcon } from "@/Icons";
 import { LIGHT_THEME } from "@/config";
 import { ProjectType } from "@/types";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Fragment } from "react";
 
 type ProjectCardProps = { project: ProjectType; theme: string };
 
 export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
+  const router = useRouter();
   return (
-    <Link
-      href={"/projects/" + project.route}
-      className={` flex flex-col w-80 overflow-hidden shadow-header rounded-lg md:rounded-3xl px-2 py-3 md:px-4 md:py-6 transition-shadow
+    <button
+      onClick={() => router.push("/projects/" + project.route)}
+      className={`flex flex-col h-full w-80 overflow-hidden shadow-header rounded-lg md:rounded-3xl px-2 py-3 md:px-4 md:py-6 transition-shadow
     ${
       theme === LIGHT_THEME
         ? "hover:shadow-slate-300 bg-slate-100 bg-opacity-70"
@@ -25,11 +26,11 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
         {project.name}
       </h1>
 
-      <p className="line-clamp-3 mb-3 md:mb-6 font-light">
+      <p className="line-clamp-3 mb-3 md:mb-6 font-light text-left">
         {project.description}
       </p>
 
-      <div className="flex">
+      <div className="flex w-full">
         <a
           onClick={(e) => e.stopPropagation()}
           target="_blank"
@@ -76,6 +77,6 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
           )}
         </a>
       </div>
-    </Link>
+    </button>
   );
 };

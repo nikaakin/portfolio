@@ -11,10 +11,9 @@ export default function ContactPage() {
         comment or offer please feel free to email me directly at&nbsp;
         <span className="underline">nikacuckiridze47@gmail.com</span> . I make
         an effort to respond to all messages within 24 hours, although it may
-        take me longer during busy periods. Alternatively, you can use the
-        contact form on my website to get in touch. Simply fill out the required
-        fields and I&apos;ll get back to you as soon as possible. Finally, if
-        you prefer to connect on social media, you can find me on&nbsp;
+        take me longer during busy periods. Simply fill out the required fields
+        and I&apos;ll get back to you as soon as possible. Finally, if you
+        prefer to connect on social media, you can find me on&nbsp;
         <span className="underline">
           https://www.linkedin.com/in/nika-cuckiridze-387063228/
         </span>{" "}
