@@ -13,6 +13,7 @@ export const LinkedinIcon = ({ theme }: { theme: string }) => {
       viewBox="0 0 310 310"
       xmlSpace="preserve"
     >
+      <title>LinkedIn</title>
       <g id="XMLID_801_">
         <path
           id="XMLID_802_"

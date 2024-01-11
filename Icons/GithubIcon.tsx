@@ -20,6 +20,7 @@ export const GithubIcon = ({
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 98 98"
     >
+      <title>Github</title>
       <path
         fill={theme === DARK_THEME ? light : dark}
         fillRule="evenodd"

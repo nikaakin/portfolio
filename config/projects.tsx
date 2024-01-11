@@ -7,6 +7,7 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     name: "CSS Challenges",
     imageUrl: "/css_challenges_1",
     createdAt: "2021-05-01",
+    route: "/css-challenges",
     tags: [
       {
         imgUrl: <ReactIcon theme={theme} key="react-css-challenges" />,

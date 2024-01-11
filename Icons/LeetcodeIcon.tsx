@@ -9,6 +9,7 @@ export const LeetcodeIcon = ({ theme }: { theme: string }) => {
       width="28px"
       height="28px"
     >
+      <title>Leetcode</title>
       <path
         fill={theme === DARK_THEME ? "#fff" : "#000"}
         d="M22 14.355c0-.742-.564-1.346-1.26-1.346H10.676c-.696 0-1.26.604-1.26 1.346s.563 1.346 1.26 1.346H20.74c.696.001 1.26-.603 1.26-1.346z"
