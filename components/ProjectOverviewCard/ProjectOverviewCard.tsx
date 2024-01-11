@@ -15,7 +15,7 @@ export const ProjectOverviewCard = ({
   return (
     <Link
       href={"projects/" + route}
-      className={`flex gap-6 border-b pb-4 p-3 rounded-sm ${
+      className={`flex gap-6 border-b pb-4 p-3 rounded-sm transition-colors ${
         theme === DARK_THEME ? "hover:bg-zinc-950" : "hover:bg-zinc-200"
       }`}
     >
