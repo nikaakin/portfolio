@@ -7,3 +7,4 @@ export * from "./ExperienceCard";
 export * from "./EducationCard";
 export * from "./Footer";
 export * from "./Past";
+export * from "./ProjectOverviewCard";

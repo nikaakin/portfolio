@@ -30,9 +30,9 @@ export default function AboutPage() {
         <Image
           src="/about.png"
           alt="about page image"
-          width={640}
-          height={640}
-          className="w-full rounded-lg h-auto "
+          width={540}
+          height={540}
+          className="rounded-lg w-full h-auto"
           priority
         />
       </div>

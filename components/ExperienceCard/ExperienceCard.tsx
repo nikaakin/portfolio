@@ -14,7 +14,7 @@ export const ExperienceCard = ({
           src={experience.logo}
           width={36}
           height={36}
-          className="object-contain  "
+          className="object-contain"
         />
       </div>
       <div className="flex-1 ">
