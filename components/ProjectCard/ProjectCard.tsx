@@ -1,13 +1,15 @@
 import { GithubIcon, LinkIcon } from "@/Icons";
 import { LIGHT_THEME } from "@/config";
 import { ProjectType } from "@/types";
+import Link from "next/link";
 import { Fragment } from "react";
 
 type ProjectCardProps = { project: ProjectType; theme: string };
 
 export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
   return (
-    <div
+    <Link
+      href={"/projects/" + project.route}
       className={` flex flex-col w-80 overflow-hidden shadow-header rounded-lg md:rounded-3xl px-2 py-3 md:px-4 md:py-6 transition-shadow
     ${
       theme === LIGHT_THEME
@@ -29,6 +31,7 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
 
       <div className="flex">
         <a
+          onClick={(e) => e.stopPropagation()}
           target="_blank"
           href={project.githubUrl}
           className="flex flex-1 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
@@ -54,6 +57,7 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
         </a>
 
         <a
+          onClick={(e) => e.stopPropagation()}
           target="_blank"
           href={project.websiteUrl}
           className="flex mr-2 md:mr-3 items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
@@ -72,6 +76,6 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
           )}
         </a>
       </div>
-    </div>
+    </Link>
   );
 };

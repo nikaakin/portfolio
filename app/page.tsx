@@ -18,6 +18,9 @@ export default function Home() {
         <PersonalLinks theme={theme} />
       </div>
       <div className="md:mb-16 mb-8">
+        <h2 className="text-xl text-slate-400 uppercase text-center pb-10 tracking-widest">
+          Projects
+        </h2>
         <ProjectsOnHome theme={theme} />
       </div>
       <div className="md:mb-16 mb-8">
