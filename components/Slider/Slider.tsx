@@ -88,16 +88,16 @@ export const Slider = ({
         <span className="md:text-sm text-xs">
           Auto slide is{" "}
           <span
-            className={`font-bold opacity-100 transition-opacity duration-300  ${
-              timerEnabled && "!opacity-0"
+            className={`font-bold opacity-100 transition-opacity duration-200  ${
+              !timerEnabled && "!opacity-0"
             } ${!isPlayButtonTextHidden && "hidden"}`}
             onTransitionEnd={() => setIsPlayButtonTextHidden(false)}
           >
             enabled
           </span>
           <span
-            className={`font-bold opacity-100 transition-opacity duration-300 ${
-              !timerEnabled && "!opacity-0"
+            className={`font-bold opacity-100 transition-opacity duration-200 ${
+              timerEnabled && "!opacity-0"
             } ${isPlayButtonTextHidden && "hidden"}`}
             onTransitionEnd={() => setIsPlayButtonTextHidden(true)}
           >
