@@ -10,7 +10,7 @@ export const ThemeContext = createContext({
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState(
     typeof window !== "undefined"
-      ? (localStorage.getItem(THEME_KEY) as string)
+      ? localStorage.getItem(THEME_KEY) || (DARK_THEME as string)
       : DARK_THEME
   );
 
