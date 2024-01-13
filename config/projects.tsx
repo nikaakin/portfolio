@@ -183,7 +183,7 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     websiteUrl: "https://cv-maker-rose.vercel.app/",
     githubUrl: "https://github.com/nikaakin/cv-maker",
     description:
-      "CV Maker - multi page form application to create your own CV.",
+      "Cv Maker - multi page form application to create your own cv.",
     images: [
       {
         url: "/projects/cv-maker/1.png",

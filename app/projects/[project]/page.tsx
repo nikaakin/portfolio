@@ -23,7 +23,9 @@ export default function ProjectPage({
       </div>
 
       <div className="flex justify-center items-center flex-col">
-        <h1 className="text-xl font-bold mb-4 md:mb-6 ">{project.name}</h1>
+        <h1 className="text-xl font-bold mb-4 md:mb-6 uppercase">
+          {project.name}
+        </h1>
         <section className="flex flex-wrap justify-center gap-14 mb-16">
           {project.tags.map(({ imgUrl, name }) => (
             <div className="relative" key={`project-view-${name}`}>

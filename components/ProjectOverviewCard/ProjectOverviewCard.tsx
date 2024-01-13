@@ -23,7 +23,7 @@ export const ProjectOverviewCard = ({
         <div className="flex flex-row  gap-2 md:gap-3">
           {tags.map((tag) => tag.imgUrl)}
         </div>
-        <h3 className="text-xl font-bold">{name}</h3>
+        <h3 className="text-xl font-bold uppercase">{name}</h3>
         <p>{description}</p>
         <p className="text-sm text-gray-500 self-end ">
           Created at: {createdAt}
