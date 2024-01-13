@@ -1,11 +1,25 @@
+"use client";
+import { Slider } from "@/components";
+import { projects } from "@/config";
+import { ThemeContext } from "@/context";
+import { ProjectType } from "@/types";
+import { useContext } from "react";
+
 export default function ProjectPage({
   params,
 }: {
   params: { project: string };
 }) {
+  const { theme } = useContext(ThemeContext);
+  const project = projects(theme).find(
+    ({ route }) => route === params.project
+  ) as ProjectType;
+
   return (
     <div>
-      <h1>{params.project}</h1>
+      <div>
+        <Slider images={project.images} />
+      </div>
     </div>
   );
 }

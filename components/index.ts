@@ -8,3 +8,4 @@ export * from "./EducationCard";
 export * from "./Footer";
 export * from "./Past";
 export * from "./ProjectOverviewCard";
+export * from "./Slider";
