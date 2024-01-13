@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 export const useSlider = (images: { url: string; alt: string }[]) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [timerEnabled, setTimerEnabled] = useState(true);
+  const [isPlayButtonTextHidden, setIsPlayButtonTextHidden] = useState(false);
   const imageCount = images.length;
   const { theme } = useContext(ThemeContext);
 
@@ -22,5 +23,7 @@ export const useSlider = (images: { url: string; alt: string }[]) => {
     setCurrentImage,
     timerEnabled,
     setTimerEnabled,
+    isPlayButtonTextHidden,
+    setIsPlayButtonTextHidden,
   };
 };

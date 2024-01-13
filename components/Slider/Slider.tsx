@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useSlider } from "./useSlider";
 import { CircleButtonIcon, ArrowIcon } from "@/Icons";
 import { Fragment } from "react";
+import { PlayNPauseIcon } from "@/Icons/PlayNPauseIcon";
 
 export const Slider = ({
   images,
@@ -16,6 +17,8 @@ export const Slider = ({
     theme,
     timerEnabled,
     setTimerEnabled,
+    isPlayButtonTextHidden,
+    setIsPlayButtonTextHidden,
   } = useSlider(images);
 
   return (
@@ -76,12 +79,35 @@ export const Slider = ({
           ))}
         </div>
       </div>
-      <button
-        className={``}
+      <div
+        className={`cursor-pointer flex items-end w-44 md:w-52 py-1 md:px-5 px-4 md:py-2 mx-auto justify-between gap-2 mt-4 rounded bg-opacity-50 hover:bg-opacity-75 ${
+          theme === LIGHT_THEME ? "bg-zinc-300" : "bg-black"
+        }`}
         onClick={setTimerEnabled.bind(null, !timerEnabled)}
       >
-        {timerEnabled ? "Disable auto slide" : "Enable auto slide"}
-      </button>
+        <span className="md:text-sm text-xs">
+          Auto slide is{" "}
+          <span
+            className={`font-bold opacity-100 transition-opacity duration-300  ${
+              timerEnabled && "!opacity-0"
+            } ${!isPlayButtonTextHidden && "hidden"}`}
+            onTransitionEnd={() => setIsPlayButtonTextHidden(false)}
+          >
+            enabled
+          </span>
+          <span
+            className={`font-bold opacity-100 transition-opacity duration-300 ${
+              !timerEnabled && "!opacity-0"
+            } ${isPlayButtonTextHidden && "hidden"}`}
+            onTransitionEnd={() => setIsPlayButtonTextHidden(true)}
+          >
+            disabled
+          </span>
+        </span>
+        <div className="w-4 h-4 md:w-5 md:h-5 flex items-center">
+          <PlayNPauseIcon isPlaying={timerEnabled} theme={theme} />
+        </div>
+      </div>
     </Fragment>
   );
 };
