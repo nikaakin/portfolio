@@ -16,3 +16,5 @@ export * from "./NodeIcon";
 export * from "./MongoIcon";
 export * from "./ExpressIcon";
 export * from "./JavascriptIcon";
+export * from "./ArrowIcon";
+export * from "./CircleButtonIcon";
