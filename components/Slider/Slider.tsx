@@ -80,7 +80,7 @@ export const Slider = ({
         </div>
       </div>
       <div
-        className={`cursor-pointer flex items-end w-44 md:w-52 py-1 md:px-5 px-4 md:py-2 mx-auto justify-between gap-2 mt-4 rounded bg-opacity-50 hover:bg-opacity-75 ${
+        className={`mb-5 cursor-pointer flex items-end w-44 md:w-52 py-1 md:px-5 px-4 md:py-2 mx-auto justify-between gap-2 mt-4 rounded bg-opacity-50 hover:bg-opacity-75 ${
           theme === LIGHT_THEME ? "bg-zinc-300" : "bg-black"
         }`}
         onClick={setTimerEnabled.bind(null, !timerEnabled)}
