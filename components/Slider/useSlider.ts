@@ -9,7 +9,7 @@ export const useSlider = (images: { url: string; alt: string }[]) => {
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
-    if (!timerEnabled) return;
+    if (!timerEnabled || window?.innerWidth < 768) return;
     const interval = setInterval(() => {
       setCurrentImage((currentImage + 1) % imageCount);
     }, 5000);

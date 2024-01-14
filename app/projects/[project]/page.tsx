@@ -22,7 +22,7 @@ export default function ProjectPage({
         <Slider images={project.images} />
       </div>
 
-      <div className="flex justify-center items-center flex-col">
+      <div className="flex justify-center items-center flex-col mt-5">
         <h1 className="text-xl font-bold mb-4 md:mb-6 uppercase">
           {project.name}
         </h1>
