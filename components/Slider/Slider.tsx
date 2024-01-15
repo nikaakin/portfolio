@@ -67,6 +67,7 @@ export const Slider = ({
               unselectable="on"
             >
               <Image
+                priority
                 unselectable="on"
                 alt={alt}
                 src={url}
