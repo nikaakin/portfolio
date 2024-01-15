@@ -1,9 +1,8 @@
-import { LIGHT_THEME } from "@/config";
 import Image from "next/image";
+import { LIGHT_THEME } from "@/config";
 import { useSlider } from "./useSlider";
-import { CircleButtonIcon, ArrowIcon } from "@/Icons";
+import { CircleButtonIcon, ArrowIcon, PlayNPauseIcon } from "@/Icons";
 import { Fragment } from "react";
-import { PlayNPauseIcon } from "@/Icons/PlayNPauseIcon";
 
 export const Slider = ({
   images,

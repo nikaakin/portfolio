@@ -18,3 +18,5 @@ export * from "./ExpressIcon";
 export * from "./JavascriptIcon";
 export * from "./ArrowIcon";
 export * from "./CircleButtonIcon";
+export * from "./EmailIcon";
+export * from "./PlayNPauseIcon";

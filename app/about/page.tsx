@@ -1,8 +1,7 @@
 "use client";
-import { GithubIcon, LeetcodeIcon, LinkedinIcon } from "@/Icons";
-import { EmailIcon } from "@/Icons/EmailIcon";
-import { ThemeContext } from "@/context";
 import Image from "next/image";
+import { GithubIcon, LeetcodeIcon, LinkedinIcon, EmailIcon } from "@/Icons";
+import { ThemeContext } from "@/context";
 import { useContext } from "react";
 
 export default function AboutPage() {
