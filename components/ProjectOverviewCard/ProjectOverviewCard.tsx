@@ -34,7 +34,7 @@ export const ProjectOverviewCard = ({
           src={images[0].url}
           alt={images[0].alt}
           width={450}
-          height={640}
+          height={300}
           className="w-full rounded-lg h-auto"
           priority
         />

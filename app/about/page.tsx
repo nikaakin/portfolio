@@ -29,8 +29,8 @@ export default function AboutPage() {
         <Image
           src="/about.png"
           alt="about page image"
-          width={540}
-          height={540}
+          width={640}
+          height={370}
           className="rounded-lg w-full h-auto"
           priority
         />
