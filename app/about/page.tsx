@@ -25,16 +25,14 @@ export default function AboutPage() {
           I&apos;m always open to new ideas and feedback.
         </p>
       </div>
-      <div>
-        <Image
-          src="/about.png"
-          alt="about page image"
-          width={640}
-          height={370}
-          className="rounded-lg w-full h-auto"
-          priority
-        />
-      </div>
+      <Image
+        src="/about.png"
+        alt="about page image"
+        width={window.innerWidth > 520 ? 540 : 280}
+        height={window.innerWidth > 520 ? 312 : 200}
+        className="rounded-lg w-full h-auto md:h-80 xl:h-96 md:w-auto"
+        priority
+      />
 
       <div className="md:mb-7 mb-5">
         <div className="flex gap-3 md:gap-7 items-center">

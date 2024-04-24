@@ -33,8 +33,16 @@ export const ProjectOverviewCard = ({
         <Image
           src={images[0].url}
           alt={images[0].alt}
-          width={450}
-          height={300}
+          width={
+            window.innerWidth > 756 ? 310 : window.innerWidth > 480 ? 500 : 270
+          }
+          height={
+            window.innerHeight > 756
+              ? 170
+              : window.innerHeight > 480
+              ? 300
+              : 180
+          }
           className="w-full rounded-lg h-auto"
           priority
         />
