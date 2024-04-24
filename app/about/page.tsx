@@ -29,7 +29,7 @@ export default function AboutPage() {
         src="/about.png"
         alt="about page image"
         width={window.innerWidth > 520 ? 540 : 280}
-        height={window.innerWidth > 520 ? 312 : 200}
+        height={window.innerHeight > 520 ? 312 : 200}
         className="rounded-lg w-full h-auto md:h-80 xl:h-96 md:w-auto"
         priority
       />
