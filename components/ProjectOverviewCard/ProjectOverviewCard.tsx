@@ -37,7 +37,7 @@ export const ProjectOverviewCard = ({
             window.innerWidth > 756 ? 310 : window.innerWidth > 480 ? 500 : 270
           }
           height={
-            window.innerWidth > 756 ? 170 : window.innerWidth > 480 ? 300 : 180
+            window.innerWidth > 756 ? 170 : window.innerWidth > 480 ? 280 : 160
           }
           className="w-full rounded-lg h-auto"
           priority
