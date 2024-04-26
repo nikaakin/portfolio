@@ -72,20 +72,21 @@ export const Slider = ({
             <div
               key={`project-page-${alt}`}
               className="inline flex-shrink-0 flex-grow-0 w-full h-full"
-              unselectable="on"
             >
               <Image
                 ref={index === 1 ? imageRef : null}
                 onDragStart={handleDragStart}
                 onDrag={handleDrag}
                 onDragEnd={handleDragEnd}
-                unselectable="on"
+                // onTouchMove={handleDrag}
+                // onTouchStart={handleDragStart}
+                // onTouchEnd={handleDragEnd}
                 priority
                 alt={alt}
                 src={url}
                 height={640}
                 width={640}
-                className="unselectable w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           ))}

@@ -19,8 +19,15 @@ export const useSlider = (images: { url: string; alt: string }[]) => {
     return () => clearInterval(interval);
   }, [currentImage, imageCount, timerEnabled]);
 
-  const handleDragStart = (e: DragEvent<HTMLImageElement>) =>
+  const handleDragStart = (e: DragEvent<HTMLImageElement>) => {
+    const dragImg = new Image();
+    // dragImg.style.width = "100px";
+    // document.body.appendChild(dragImg);
+    dragImg.src =
+      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+    e.dataTransfer.setDragImage(dragImg, 0, 0);
     setDragStart(e.screenX);
+  };
 
   const handleDrag = (e: DragEvent<HTMLImageElement>) =>
     setDragLen(e.screenX - dragStart);
