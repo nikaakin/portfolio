@@ -18,6 +18,11 @@ export const Slider = ({
     setTimerEnabled,
     isPlayButtonTextHidden,
     setIsPlayButtonTextHidden,
+    imageRef,
+    dragLen,
+    handleDrag,
+    handleDragEnd,
+    handleDragStart,
   } = useSlider(images);
 
   return (
@@ -28,17 +33,16 @@ export const Slider = ({
       `}
       >
         <div
-          onClick={() =>
-            setCurrentImage(
-              currentImage - 1 < 0 ? imageCount - 1 : currentImage - 1
-            )
-          }
+          onClick={setCurrentImage.bind(
+            null,
+            currentImage - 1 < 0 ? imageCount - 1 : currentImage - 1
+          )}
           className="z-20 cursor-pointer absolute h-full w-8 md:w-12 top-1/2 -translate-y-1/2 left-0 flex items-center justify-center rotate-180 hover:bg-black hover:bg-opacity-20"
         >
           <ArrowIcon />
         </div>
         <div
-          onClick={() => setCurrentImage((currentImage + 1) % imageCount)}
+          onClick={setCurrentImage.bind(null, (currentImage + 1) % imageCount)}
           className="z-20  cursor-pointer absolute h-full w-8 md:w-12 top-1/2 -translate-y-1/2 right-0 flex items-center justify-center hover:bg-black hover:bg-opacity-20"
         >
           <ArrowIcon />
@@ -57,18 +61,26 @@ export const Slider = ({
         <div
           className="absolute flex w-full h-full transition-transform"
           style={{
-            transform: "translateX(-" + currentImage * 100 + "%)",
+            transform:
+              "translateX(-" +
+              (currentImage * 100 +
+                (-dragLen / (imageRef.current?.width || 0)) * 100) +
+              "%)",
           }}
         >
-          {images.map(({ alt, url }) => (
+          {images.map(({ alt, url }, index) => (
             <div
               key={`project-page-${alt}`}
               className="inline flex-shrink-0 flex-grow-0 w-full h-full"
               unselectable="on"
             >
               <Image
-                priority
+                ref={index === 1 ? imageRef : null}
+                onDragStart={handleDragStart}
+                onDrag={handleDrag}
+                onDragEnd={handleDragEnd}
                 unselectable="on"
+                priority
                 alt={alt}
                 src={url}
                 height={640}
