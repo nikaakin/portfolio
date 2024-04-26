@@ -1,12 +1,19 @@
 import { ThemeContext } from "@/context";
-import { DragEvent, useContext, useEffect, useRef, useState } from "react";
+import {
+  DragEvent,
+  TouchEvent,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 export const useSlider = (images: { url: string; alt: string }[]) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [timerEnabled, setTimerEnabled] = useState(true);
   const [isPlayButtonTextHidden, setIsPlayButtonTextHidden] = useState(true);
-  const [dragStart, setDragStart] = useState(0);
-  const [dragLen, setDragLen] = useState(0);
+  const [swipeStart, setSwipeStart] = useState(0);
+  const [swipeLen, setSwipeLen] = useState(0);
   const imageRef = useRef<HTMLImageElement>(null);
   const imageCount = images.length;
   const { theme } = useContext(ThemeContext);
@@ -19,24 +26,53 @@ export const useSlider = (images: { url: string; alt: string }[]) => {
     return () => clearInterval(interval);
   }, [currentImage, imageCount, timerEnabled]);
 
-  const handleDragStart = (e: DragEvent<HTMLImageElement>) => {
-    const dragImg = new Image();
-    // dragImg.style.width = "100px";
-    // document.body.appendChild(dragImg);
-    dragImg.src =
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-    e.dataTransfer.setDragImage(dragImg, 0, 0);
-    setDragStart(e.screenX);
+  const handleSwipeStart = (
+    e: DragEvent<HTMLImageElement> | TouchEvent<HTMLImageElement>
+  ) => {
+    if ((e as TouchEvent<HTMLImageElement>).touches) {
+      e = e as TouchEvent<HTMLImageElement>;
+      setSwipeStart(e.touches[0].clientX);
+    } else {
+      e = e as DragEvent<HTMLImageElement>;
+      const dragImg = new Image();
+      // dragImg.style.width = "100px";
+      // document.body.appendChild(dragImg);
+      dragImg.src =
+        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+      e.dataTransfer.setDragImage(dragImg, 0, 0);
+      setSwipeStart(e.screenX);
+    }
   };
 
-  const handleDrag = (e: DragEvent<HTMLImageElement>) =>
-    setDragLen(e.screenX - dragStart);
+  const handleSwipe = (
+    e: DragEvent<HTMLImageElement> | TouchEvent<HTMLImageElement>
+  ) => {
+    if ((e as TouchEvent<HTMLImageElement>).touches) {
+      e = e as TouchEvent<HTMLImageElement>;
+      setSwipeLen(e.touches[0].clientX - swipeStart);
+    } else {
+      e = e as DragEvent<HTMLImageElement>;
+      setSwipeLen(e.screenX - swipeStart);
+    }
+  };
 
-  const handleDragEnd = (e: DragEvent<HTMLImageElement>) => {
-    if (e.screenX === dragStart) return;
+  const handleSwipeEnd = (
+    e: DragEvent<HTMLImageElement> | TouchEvent<HTMLImageElement>
+  ) => {
+    let x: number;
 
-    if (Math.abs(e.screenX - dragStart) / imageRef.current!.width > 0.2) {
-      if (e.screenX - dragStart > 0) {
+    if ((e as TouchEvent<HTMLImageElement>).touches) {
+      e = e as TouchEvent<HTMLImageElement>;
+      x = e.changedTouches[0].clientX;
+    } else {
+      e = e as DragEvent<HTMLImageElement>;
+      x = e.screenX;
+    }
+
+    if (x === swipeStart) return;
+
+    if (Math.abs(x - swipeStart) / imageRef.current!.width > 0.2) {
+      if (x - swipeStart > 0) {
         setCurrentImage(
           currentImage - 1 < 0 ? imageCount - 1 : currentImage - 1
         );
@@ -44,8 +80,9 @@ export const useSlider = (images: { url: string; alt: string }[]) => {
         setCurrentImage((currentImage + 1) % imageCount);
       }
     }
-    setDragStart(0);
-    setDragLen(0);
+
+    setSwipeStart(0);
+    setSwipeLen(0);
   };
 
   return {
@@ -58,9 +95,9 @@ export const useSlider = (images: { url: string; alt: string }[]) => {
     isPlayButtonTextHidden,
     setIsPlayButtonTextHidden,
     imageRef,
-    dragLen,
-    handleDrag,
-    handleDragStart,
-    handleDragEnd,
+    swipeLen,
+    handleSwipe,
+    handleSwipeStart,
+    handleSwipeEnd,
   };
 };

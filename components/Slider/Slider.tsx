@@ -19,16 +19,16 @@ export const Slider = ({
     isPlayButtonTextHidden,
     setIsPlayButtonTextHidden,
     imageRef,
-    dragLen,
-    handleDrag,
-    handleDragEnd,
-    handleDragStart,
+    swipeLen,
+    handleSwipe,
+    handleSwipeStart,
+    handleSwipeEnd,
   } = useSlider(images);
 
   return (
     <Fragment>
       <div
-        className={`relative mx-auto w-52 h-28 sm:h-52 sm:w-96  xl:w-[780px] xl:h-[420px] overflow-hidden rounded-lg shadow-header
+        className={`relative mx-auto w-72 h-40 sm:h-52 sm:w-96  xl:w-[780px] xl:h-[420px] overflow-hidden rounded-lg shadow-header
       ${theme === LIGHT_THEME ? "shadow-slate-900" : "shadow-gray-700 "}  
       `}
       >
@@ -64,7 +64,7 @@ export const Slider = ({
             transform:
               "translateX(-" +
               (currentImage * 100 +
-                (-dragLen / (imageRef.current?.width || 0)) * 100) +
+                (-swipeLen / (imageRef.current?.width || 0)) * 100) +
               "%)",
           }}
         >
@@ -75,12 +75,12 @@ export const Slider = ({
             >
               <Image
                 ref={index === 1 ? imageRef : null}
-                onDragStart={handleDragStart}
-                onDrag={handleDrag}
-                onDragEnd={handleDragEnd}
-                // onTouchMove={handleDrag}
-                // onTouchStart={handleDragStart}
-                // onTouchEnd={handleDragEnd}
+                onDragStart={handleSwipeStart}
+                onDrag={handleSwipe}
+                onDragEnd={handleSwipeEnd}
+                onTouchMove={handleSwipe}
+                onTouchStart={handleSwipeStart}
+                onTouchEnd={handleSwipeEnd}
                 priority
                 alt={alt}
                 src={url}
