@@ -11,7 +11,7 @@ export default function AboutPage() {
     <main className="flex gap-10  flex-col items-center justify-between">
       <div>
         <h1 className="font-bold md:text-4xl text-xl md:mb-6 mb-3 ">
-          I&apos;m Nika Cuckiridze, I live in Georgia
+          I&apos;m Nika, I live in Georgia
         </h1>
 
         <p className="leading-loose">
@@ -19,8 +19,8 @@ export default function AboutPage() {
           proud of the progress I&apos;ve made. If you&apos;re interested in any
           of the projects I&apos;ve worked on, please feel free to check out the
           code and suggest any improvements or enhancements you might have in
-          mind by leaving an issue or mailing me through
-          <span className="underline"> nikacuckiridze47@gmail.com</span>.
+          mind by leaving an issue or mailing me through &nbsp;
+          <span className="underline">nikacuckiridze47@gmail.com</span>.
           Collaborating with others is a great way to learn and grow, and
           I&apos;m always open to new ideas and feedback.
         </p>

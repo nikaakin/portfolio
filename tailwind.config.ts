@@ -33,7 +33,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "main-background": "linear-gradient(180deg, #11101A 0%, #08080D 100%)",
         "main-forefront":
-          "linear-gradient(187.16deg, #181623 0.07%, #191725 51.65%, #0D0B14 98.75%)",
+          "linear-gradient(187.16deg, #181623 0.07%, #191725 51.65%, #12101C 98.75%)",
       },
       width: {
         "300": "1200px",

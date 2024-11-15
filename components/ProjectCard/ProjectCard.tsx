@@ -8,16 +8,11 @@ type ProjectCardProps = { project: ProjectType; theme: string };
 
 export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
   const router = useRouter();
+  const goTo = (route: string) => router.push("/projects/" + route);
+  const s = styles(theme);
+
   return (
-    <button
-      onClick={() => router.push("/projects/" + project.route)}
-      className={`flex flex-col h-full w-80 overflow-hidden shadow-header rounded-lg md:rounded-3xl px-2 py-3 md:px-4 md:py-6 transition-shadow
-    ${
-      theme === LIGHT_THEME
-        ? "hover:shadow-slate-300 bg-slate-100 bg-opacity-70"
-        : "hover:shadow-black bg-black bg-opacity-10"
-    }`}
-    >
+    <button onClick={goTo.bind(null, project.route)} className={s.button}>
       <div className="flex flex-row gap-2 md:gap-3 mb-2 md:mb-4">
         {project.tags.map((tag) => tag.imgUrl)}
       </div>
@@ -46,13 +41,7 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
                 width="24"
                 height="24"
               />
-              <span
-                className={`text-sm  ${
-                  theme === LIGHT_THEME ? "text-teal-700" : "text-teal-500"
-                }`}
-              >
-                View Source
-              </span>
+              <span className={s.githubLinkText}>View Source</span>
             </Fragment>
           )}
         </a>
@@ -66,13 +55,7 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
           {project.websiteUrl && (
             <Fragment>
               <LinkIcon theme={theme} />
-              <span
-                className={`text-sm  ${
-                  theme === LIGHT_THEME ? "text-sky-700" : "text-cyan-600"
-                }`}
-              >
-                View Project
-              </span>
+              <span className={s.projectLinkText}>View Project</span>
             </Fragment>
           )}
         </a>
@@ -80,3 +63,18 @@ export const ProjectCard = ({ project, theme }: ProjectCardProps) => {
     </button>
   );
 };
+
+const styles = (theme: string) => ({
+  button: `flex flex-col h-full w-80 overflow-hidden shadow-header rounded-lg md:rounded-3xl px-2 py-3 md:px-4 md:py-6 transition-shadow
+    ${
+      theme === LIGHT_THEME
+        ? "hover:shadow-slate-300 bg-slate-100 bg-opacity-70"
+        : "hover:shadow-black bg-black bg-opacity-10"
+    }`,
+  githubLinkText: `text-sm  ${
+    theme === LIGHT_THEME ? "text-teal-700" : "text-teal-500"
+  }`,
+  projectLinkText: `text-sm  ${
+    theme === LIGHT_THEME ? "text-sky-700" : "text-cyan-600"
+  }`,
+});

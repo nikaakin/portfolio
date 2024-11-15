@@ -3,8 +3,8 @@ export const EducationIcon = ({ theme }: { theme: string }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 256"
-      width="36px"
-      height="36px"
+      width="52px"
+      height="52px"
     >
       <g id="icons_without_caption">
         <g id="EDUCATION_SAVINGS">

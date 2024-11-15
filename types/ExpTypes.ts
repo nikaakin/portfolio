@@ -3,6 +3,7 @@ export type ExperienceType = {
   name: string;
   title: string;
   duration: string;
+  link: string;
 };
 
 export type EducationType = {
@@ -10,4 +11,5 @@ export type EducationType = {
   name: string;
   degree: string;
   duration: string;
+  link: string;
 };

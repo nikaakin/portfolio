@@ -5,8 +5,8 @@ export const ExperienceIcon = ({ theme }: { theme: string }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      width="20px"
-      height="20px"
+      width="36px"
+      height="36px"
     >
       <path
         fill={theme === LIGHT_THEME ? "#1a1a1a" : "#afafaf"}
