@@ -14,7 +14,6 @@ import { ProjectType } from "@/types";
 
 export const projects: (theme: string) => ProjectType[] = (theme) => [
   {
-    id: "1",
     name: "Movie quotes",
     createdAt: "2023-06-05",
     route: "movie-quotes",
@@ -36,7 +35,7 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
         name: "tailwind",
       },
     ],
-    websiteUrl: "https://movie-quotes.nnteam.ge/",
+    websiteUrl: "https://movie-quotes.nikac.in/",
     githubUrl: "https://github.com/nikaakin/movie-quotes-front",
     description:
       "Movie Quotes - Website where users can share their favourite movie quotes. Every user will be able to delete any number of quotes and movies they have made. Reacting or commenting to someones quote will result to notifying the receiver.",
@@ -68,7 +67,6 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     ],
   },
   {
-    id: "2",
     name: "Natours",
     createdAt: "2022-11-05",
     route: "natours",
@@ -114,7 +112,47 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     ],
   },
   {
-    id: "3",
+    name: "Tours website",
+    createdAt: "2023-02-01",
+    route: "tours-website",
+    tags: [
+      {
+        imgUrl: <SCSSIcon key="scss-tours-website" />,
+        name: "SCSS",
+      },
+    ],
+    websiteUrl: "https://natours.nikac.in/",
+    githubUrl: "https://github.com/nikaakin/Natours-Sass",
+    description:
+      "Tours website - website where users can look through all the tours available. Website's focus was to overcome UI challanges and make it look good and work good as well with some of the native css animations.",
+    images: [
+      {
+        url: "/projects/tours-website/1.png",
+        alt: "tours website 1",
+      },
+      {
+        url: "/projects/tours-website/2.png",
+        alt: "tours website 2",
+      },
+      {
+        url: "/projects/tours-website/3.png",
+        alt: "tours website 3",
+      },
+      {
+        url: "/projects/tours-website/4.png",
+        alt: "tours website 4",
+      },
+      {
+        url: "/projects/tours-website/5.png",
+        alt: "tours website 5",
+      },
+      {
+        url: "/projects/tours-website/6.png",
+        alt: "tours website 6",
+      },
+    ],
+  },
+  {
     name: "covid questionare",
     createdAt: "2023-05-05",
     route: "covid-questionare",
@@ -134,7 +172,7 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
         name: "Tailwind",
       },
     ],
-    websiteUrl: "https://covid-questionnaire-nikaakin.vercel.app/",
+    websiteUrl: "https://covid-questionnaire.nikac.in/",
     githubUrl: "https://github.com/nikaakin/covid-questionnaire",
     description:
       "Covid Questionaire - multi page form application with dynamic animations.",
@@ -162,7 +200,6 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     ],
   },
   {
-    id: "4",
     name: "cv maker",
     createdAt: "2023-03-05",
     route: "cv-maker",
@@ -180,7 +217,7 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
         name: "SCSS",
       },
     ],
-    websiteUrl: "https://cv-maker-rose.vercel.app/",
+    websiteUrl: "https://cv-maker.nikac.in/",
     githubUrl: "https://github.com/nikaakin/cv-maker",
     description:
       "Cv Maker - multi page form application to create your own cv.",
@@ -204,7 +241,6 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     ],
   },
   {
-    id: "5",
     name: "forkify",
     createdAt: "2022-11-02",
     route: "forkify",
@@ -238,7 +274,6 @@ export const projects: (theme: string) => ProjectType[] = (theme) => [
     ],
   },
   {
-    id: "6",
     name: "CSS Challenges",
     createdAt: "2023-04-02",
     route: "css-challenges",
