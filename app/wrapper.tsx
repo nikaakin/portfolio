@@ -3,10 +3,14 @@ import { DynamicHeader, Footer } from "@/components";
 import { LIGHT_THEME } from "@/config";
 import { ThemeContext } from "@/context";
 import dynamic from "next/dynamic";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 export const Wrapper = ({ children }: { children: React.ReactNode }) => {
   const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   return (
     <div
