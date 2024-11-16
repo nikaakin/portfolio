@@ -10,14 +10,14 @@ export const experience = [
     logo: "/experience/petinder.jpeg",
     name: "Petinder",
     title: "Fullstack Developer",
-    duration: "2023 Dec - 2024 June",
+    duration: "2023 Dec - 2024 Feb",
     link: "https://petinder.online/",
   },
   {
     logo: "/experience/savicsoft.jpeg",
     name: "Savicsoft",
     title: "Frontend Developer",
-    duration: "2023 Oct - 2023 Dec",
+    duration: "2023 Oct - 2023 Jun",
     link: "https://savicsoft.com/",
   },
   {
